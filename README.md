@@ -17,8 +17,11 @@
 Ensure your AWS credentials and region are set:
 
   export AWS_ACCESS_KEY_ID=(insert) 
+  
   export AWS_SECRET_ACCESS_KEY=(insert) 
+  
   export AWS_REGION=(ex. us-east-1)
+  
   export AWS_SESSION_TOKEN=(insert) 
 
 or..
@@ -32,8 +35,11 @@ or..
 Navigate to the Terraform directory, initialize, plan, and apply:
 
   cd terraform
+  
   terraform init
+  
   terraform plan
+  
   terraform apply
 
 
@@ -46,10 +52,12 @@ Note down the public ip.
 Update inventory/hosts.ini with the public IP from Terraform:
 
   [minecraft]
+  
   <ec2_public_ip> ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/<key>.pem
 
 Run the playbook:
   cd ../ansible
+  
   ansible-playbook -i inventory/hosts.ini playbook.yml
 
 
@@ -63,6 +71,7 @@ Check
 
 Service status
   ssh -i ~/.ssh/<key>.pem ubuntu@$EC2_PUBLIC_IP \
+    
     sudo systemctl status minecraft-docker
 
 ### 6. Cleanup
