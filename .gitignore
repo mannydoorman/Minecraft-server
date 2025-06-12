@@ -1,0 +1,17 @@
+# Terraform directories and state
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Ansible retries
+*.retry
+
+# Private SSH keys
+*.pem
