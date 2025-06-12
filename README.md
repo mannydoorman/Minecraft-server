@@ -9,6 +9,7 @@
   
 ### 1. Clone Repo
   git clone https://github.com/mannydoorman/Minecraft-server
+  
   cd minecraft-server
 
 ### 2. Configure 
